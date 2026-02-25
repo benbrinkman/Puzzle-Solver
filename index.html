@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Puzzle Solver</title>
+    <script src="puzzle.js"></script>
+    <link rel="stylesheet" type="text/css" href="puzzle.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="contentWrapper">
+            <div id="topWrapper">
+                <div id="inputWrapper">
+                    <span class="shadow title"><span class="titlePadding">Date Tiles Puzzle Solver</span></span>
+                    <div id="buttonHolder">
+                        <div id="solveButton" class="button disabledButton" onclick="SolveDate()">Solve</div>
+                        <div id="clearButton" class="button" onclick="clearBoard()">Clear</div>
+                    </div>
+                    <span id="status">To begin, select a target date below</span>
+
+
+                </div>
+                <div id="nodeGridWrapper">
+                    <div id="cover"></div>
+                </div>
+            </div>
+            <div id="sideWrapper">
+                <div id="sideContent">
+                    <div class="title" id="solutionInfo">
+                        <span id = "titleSpan" class="tab tabIn" onclick="ToggleHelp(this)">Solutions</span>
+                        <span id="moreInfo" class="tab" onclick="ToggleHelp(this)"><span>Info</span><span class="qBox">?</span></span>
+                    </div>
+                    <div id="helpScreen" class="sideScreen">
+                        <div class="helpText">This puzzle involves filling the board up with tiles while leaving two spots open - one month and one day.</div>
+                        <div class="helpText">Sometimes I would get frustrated while trying to solve it, so I wrote a program to do it for me.</div>
+                        <div class="helpText">If you want to try solving it yourself, you have come to the wrong place.</div>
+                        <span class="title">Tiles</span>
+                        <div id="pieceDisplay"></div>
+                    </div>
+                    <div id="solutionDisplay" class="sideScreen hideDisplay">
+                        <span class = "displayText" id="displayText">Solutions will appear here</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
